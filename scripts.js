@@ -26,18 +26,13 @@ bottomSlider.addEventListener("input", function (e) {
 
 generateBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  try {
-    if (imgInput.value !== "") {
-      createMemeCard();
-      resetForm();
-    } else {
-      imgInput.style.border = " 3px solid red";
-      inputError.innerHTML = "Please provide a image URL!";
-    }
-  } catch (err) {
-    alert(
-      "I am sorry! The URL you used did not return a valid image.  Please try another URL."
-    );
+
+  if (imgInput.value !== "") {
+    createMemeCard();
+    resetForm();
+  } else {
+    imgInput.style.border = " 3px solid red";
+    inputError.innerHTML = "Please provide a image URL!";
   }
 });
 
@@ -71,8 +66,9 @@ function addMemeContent() {
   let topText = document.createElement("div");
   let bottomText = document.createElement("div");
   let removeBtn = document.createElement("button");
+  let imageSrc = imgInput.value;
 
-  memeImg.setAttribute("src", imgInput.value);
+  memeImg.setAttribute("src", imageSrc);
   memeImg.classList.add("meme");
   topText.classList.add("w3-display-topmiddle", "inner-padding", "meme-text");
   bottomText.classList.add(
