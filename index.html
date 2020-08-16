@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="pics/logo.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Meme Generator</title>
+  </head>
+  <body>
+    <!-- Title -->
+    <div id="header" class="container">
+      <h1>Welcome to the Meme-Generator</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      </p>
+    </div>
+    <!-- End Title -->
+
+    <!-- Input -->
+    <div class="input-form container">
+      <form action="">
+        <div class="row">
+          <span id="input-error"></span>
+          <label for="img-url">Image URL: </label>
+          <input
+            type="url"
+            name="img-url"
+            id="img-url"
+            placeholder="https://example.com"
+            pattern="https://.*"
+            required
+          />
+        </div>
+        <div class="row">
+          <label for="top-text">Top Text:</label>
+          <input
+            type="text"
+            name="top-text"
+            id="top-text"
+            placeholder="optional"
+          />
+          <input
+            type="range"
+            name="top-font-size"
+            id="top-font-size"
+            min="10"
+            max="50"
+            step="1"
+            value="16"
+          />
+          <label for="top-font-size">Top Font Size </label>
+          <p>Font Size: <span id="top-font-value"></span></p>
+        </div>
+        <div class="row">
+          <label for="bottom-text">Bottom Text:</label>
+          <input
+            type="text"
+            name="bottom-text"
+            id="bottom-text"
+            placeholder="optional"
+          />
+          <input
+            type="range"
+            name="bottom-font-size"
+            id="bottom-font-size"
+            min="10"
+            max="50"
+            step="1"
+            value="16"
+          />
+          <label for="bottom-font-size">Bottom Font Size </label>
+          <p>Font Size: <span id="bottom-font-value"></span></p>
+        </div>
+        <div class="row">
+          <label for="font-color">Choose font color:</label>
+          <input type="color" name="font-color" id="font-color" />
+        </div>
+        <div class="row">
+          <button id="generate-btn" type="submit">Generate</button>
+        </div>
+      </form>
+    </div>
+    <!-- End input -->
+
+    <!-- Generator body -->
+    <div id="generator-body" class="w3-container"></div>
+    <!-- End Generator body -->
+
+    <!-- My Scripts -->
+    <script src="scripts.js"></script>
+  </body>
+</html>
